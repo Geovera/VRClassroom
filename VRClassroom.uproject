@@ -1,0 +1,18 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{4EDE54B2-41A6-5679-C2F5-D48179AF5635}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "VRClassroom",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"TargetPlatforms": [
+		"PS4",
+		"WindowsNoEditor",
+		"Android"
+	]
+}
