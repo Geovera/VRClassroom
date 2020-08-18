@@ -8,7 +8,7 @@ Make sure you download version 4.25
 
 Then, you'll need Visual Studio 2017 or 2019 with the C++ frameworks and the .NET Framework 4.6.2 targeting pack
 
-Once you have those, just follow this https://developer.oculus.com/documentation/unreal/unreal-building-ue4-from-source/
+Once you have those, just follow this https://docs.unrealengine.com/en-US/Programming/Development/BuildingUnrealEngine/index.html
 
 For oculus quest development, we need android development tools
 Here is a tutorial for that: https://docs.unrealengine.com/en-US/Platforms/Mobile/Android/Setup/AndroidStudio/index.html
