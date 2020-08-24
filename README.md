@@ -5,7 +5,7 @@ Developed with Unreal Engine 4
 
 ## Steps
 
-- Follow this guide on building Unreal Engine from source: https://www.unrealengine.com/en-US/ue4-on-github
+- **Follow this guide** on building Unreal Engine from source: https://www.unrealengine.com/en-US/ue4-on-github
 
 Make sure you clone version 4.25 with this command:
 
