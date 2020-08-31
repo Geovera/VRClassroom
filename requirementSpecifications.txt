@@ -1,0 +1,14 @@
+Everyone should be able to join public events
+Everyone should be able to see others in the meeting
+Students should be able to join classes with proper credentials
+Students should be able to take notes
+Students should be able to move around classrooms with given permission from teacher
+Students should be able to see the white board
+Teachers should be able to see the white board
+Teachers should be able to write on the white board
+Teachers should be able to pass off the white board responsibilities
+Teachers should be able to allow students to move around the class room
+Teachers should be able to stream their computer screens.  
+
+Its seems like teachers and students should have all the same responsibilities, teachers by default, students once the teacher passes off the responsibilities. Much like zoom, students can request to stream their screens, we could implement something that allows students to take control of certain things (white board, microphone, screen share).
+Also I think with scalabiltiy in mind, it may be of interest to refer to users not as Teachers and Students but rather Hosts and Guests/Attendants.
