@@ -18,6 +18,10 @@ Make sure you clone version 4.25 with this command:
 
 - Next, just follow the [Build Instructions](https://docs.unrealengine.com/en-US/Programming/Development/BuildingUnrealEngine/index.html)
 
+or
+
+- If on Linux/macOS: https://docs.unrealengine.com/en-US/Platforms/Linux/BeginnerLinuxDeveloper/SettingUpAnUnrealWorkflow/index.html#3-buildingue4onlinux
+
 For oculus quest development, we need android development tools
 [Here is a tutorial for that](https://docs.unrealengine.com/en-US/Platforms/Mobile/Android/Setup/AndroidStudio/index.html)
 
