@@ -1,18 +1,50 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{4EDE54B2-41A6-5679-C2F5-D48179AF5635}",
+	"EngineAssociation": "{33C11E74-419A-46C9-65FA-D293D1CF3677}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
 		{
 			"Name": "VRClassroom",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"UMG",
+				"GameplayAbilities",
+				"OWSPlugin"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "Substance",
+			"Enabled": false,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/2f6439c2f9584f49809d9b13b16c2ba4"
+		},
+		{
+			"Name": "VaRestPlugin",
+			"Enabled": false,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/e47be161e7a24e928560290abd5dcc4f"
+		},
+		{
+			"Name": "GameplayAbilities",
+			"Enabled": true
+		},
+		{
+			"Name": "MessagingDebugger",
+			"Enabled": true
+		},
+		{
+			"Name": "OWSPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "ReplicationGraph",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
-		"PS4",
-		"WindowsNoEditor",
-		"Android"
+		"WindowsNoEditor"
 	]
 }

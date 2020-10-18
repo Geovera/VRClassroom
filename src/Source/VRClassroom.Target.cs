@@ -5,11 +5,10 @@ using System.Collections.Generic;
 
 public class VRClassroomTarget : TargetRules
 {
-	public VRClassroomTarget(TargetInfo Target) : base(Target)
+	public VRClassroomTarget(TargetInfo Target) : base (Target)
 	{
 		Type = TargetType.Game;
-		DefaultBuildSettings = BuildSettingsVersion.V2;
-
-		ExtraModuleNames.AddRange( new string[] { "VRClassroom" } );
-	}
+        ExtraModuleNames.AddRange(new string[] { "VRClassroom" });
+        //DefaultBuildSettings = BuildSettingsVersion.V2;
+    }
 }
