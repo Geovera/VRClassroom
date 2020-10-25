@@ -240,6 +240,8 @@ void AOWSPlayerController::OnTravelToLastZoneServerResponseReceived(FHttpRequest
 
 			UE_LOG(OWS, Log, TEXT("Travel GUID: %s"), *ServerTravelUserSessionGUID);
 
+			UE_LOG(OWS, Log, TEXT("IP: %s, Port %s"), *ServerIP, *Port);
+
 			//Encrypt data to send
 			FString IDData = FString::SanitizeFloat(ServerTravelX)
 				+ "|" + FString::SanitizeFloat(ServerTravelY)
