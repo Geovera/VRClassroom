@@ -234,13 +234,13 @@ void AOWSPlayerController::OnTravelToLastZoneServerResponseReceived(FHttpRequest
 				return;
 			}
 
-			ServerAndPort = ServerIP + FString(TEXT(":")) + Port.Left(4);
+			ServerAndPort = FString(TEXT("127.0.0.1:7778"));//ServerIP + FString(TEXT(":")) + Port.Left(4);
 
 			UE_LOG(OWS, Warning, TEXT("OnTravelToLastZoneServerResponseReceived ServerAndPort: %s"), *ServerAndPort);
 
 			UE_LOG(OWS, Log, TEXT("Travel GUID: %s"), *ServerTravelUserSessionGUID);
 
-			UE_LOG(OWS, Log, TEXT("IP: %s, Port %s"), *ServerIP, *Port);
+			UE_LOG(OWS, Log, TEXT("IP: %s"), *ServerAndPort);
 
 			//Encrypt data to send
 			FString IDData = FString::SanitizeFloat(ServerTravelX)
@@ -1968,6 +1968,6 @@ void AOWSPlayerController::GetLifetimeReplicatedProps(TArray< FLifetimeProperty 
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
-	DOREPLIFETIME_CONDITION(AOWSPlayerController, MaxPredictionPing, COND_OwnerOnly);
-	DOREPLIFETIME_CONDITION(AOWSPlayerController, PredictionFudgeFactor, COND_OwnerOnly);
+	//DOREPLIFETIME_CONDITION(AOWSPlayerController, MaxPredictionPing, COND_OwnerOnly);
+	//DOREPLIFETIME_CONDITION(AOWSPlayerController, PredictionFudgeFactor, COND_OwnerOnly);
 }

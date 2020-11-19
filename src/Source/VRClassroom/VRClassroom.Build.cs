@@ -13,6 +13,7 @@ public class VRClassroom : ModuleRules
             "Engine",
             "OWSPlugin",
             "AIModule",
+            "Http",
             "Json",
             "JsonUtilities",
             "InputCore",
