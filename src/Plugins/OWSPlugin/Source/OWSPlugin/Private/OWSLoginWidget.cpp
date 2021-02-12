@@ -38,7 +38,8 @@ void UOWSLoginWidget::LoginAndCreateSession(FString Email, FString Password)
 	TSharedRef<IHttpRequest> Request = Http->CreateRequest();
 	Request->OnProcessRequestComplete().BindUObject(this, &UOWSLoginWidget::OnLoginAndCreateSessionResponseReceived);
 
-	FString url = FString(OWS2APIPath + "api/Users/LoginAndCreateSession");
+	FString url2 = FString(OWS2APIPath + "api/Users/LoginAndCreateSession");
+	FString url = FString("https://api.ev3.me/login");
 
 	//Trim whitespace
 	Email.TrimStartAndEndInline();
@@ -47,22 +48,26 @@ void UOWSLoginWidget::LoginAndCreateSession(FString Email, FString Password)
 	TArray<FStringFormatArg> FormatParams;
 	FormatParams.Add(Email);
 	FormatParams.Add(Password);
-	FString PostParameters = FString::Format(TEXT("{ \"Email\": \"{0}\", \"Password\": \"{1}\" }"), FormatParams);
+	FString PostParameters = FString(TEXT("username=")) + Email
+		+ FString(TEXT("&password=")) + Password;
+	UE_LOG(LogTemp, Log, TEXT("FUCK"));
 
 	Request->SetURL(url);
 	Request->SetVerb("POST");
 	Request->SetHeader(TEXT("User-Agent"), "X-UnrealEngine-Agent");
-	Request->SetHeader("Content-Type", TEXT("application/json"));
-	Request->SetHeader(TEXT("X-CustomerGUID"), RPGAPICustomerKey);	
+	Request->SetHeader("Content-Type", TEXT("application/x-www-form-urlencoded"));
+	//Request->SetHeader(TEXT("X-CustomerGUID"), RPGAPICustomerKey);	
 	Request->SetContentAsString(PostParameters);
 	Request->ProcessRequest();
 }
 
 void UOWSLoginWidget::OnLoginAndCreateSessionResponseReceived(FHttpRequestPtr Request, FHttpResponsePtr Response, bool bWasSuccessful)
 {
+	UE_LOG(LogTemp, Log, TEXT("DSA"), *Response->GetContentAsString());
 	if (bWasSuccessful && Response.IsValid())
 	{
 		TSharedPtr<FJsonObject> JsonObject;
+		UE_LOG(LogTemp, Log, TEXT("Token: %s"), *Response->GetContentAsString());
 		TSharedRef<TJsonReader<>> Reader = TJsonReaderFactory<>::Create(Response->GetContentAsString());
 
 		if (FJsonSerializer::Deserialize(Reader, JsonObject))

@@ -20,7 +20,7 @@ public class VRClassroom : ModuleRules
             "GameplayAbilities"
         });
 
-		PrivateDependencyModuleNames.AddRange(new string[] {  });
+		PrivateDependencyModuleNames.AddRange(new string[] { "UMG" });
 
         PublicIncludePathModuleNames.AddRange(new string[] { "OWSPlugin" });
 
